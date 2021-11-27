@@ -153,8 +153,10 @@ a > .accent {
 
   cursor: pointer;
 }
-.hero-section{
+.hero-section {
   background-color: var(--footer-bg-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 /*Особенности*/
 .features.container {
@@ -226,13 +228,13 @@ a > .accent {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
-.team.section{
-background-color: var(--secondary-background-color);
+.team.section {
+  background-color: var(--secondary-background-color);
 }
 
 /* Фильтры в Портфолио */
 .filter-list .btn {
-  background-color:(var(--secondary-background-color);
+  background-color: var(--secondary-background-color);
   border-radius: 4px;
   border: 0;
 
