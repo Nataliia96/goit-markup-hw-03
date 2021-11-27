@@ -149,7 +149,11 @@ a > .accent {
 
   cursor: pointer;
 }
-
+.header-section {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(236, 236, 236, 1);
+}
 /*Особенности*/
 .features.container {
   display: flex;
@@ -199,6 +203,9 @@ a > .accent {
   text-align: center;
 }
 .team-members-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -206,6 +213,9 @@ a > .accent {
   color: var(--title-text-color);
 }
 .team-members-position {
+  margin-bottom: 30px;
+  margin-top: 10px;
+
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
