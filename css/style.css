@@ -177,6 +177,8 @@ a > .accent {
 /* Заголовки секций */
 .projects-section-title,
 .team-section-title {
+  margin-bottom: 50px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -188,11 +190,13 @@ a > .accent {
 .projects-list {
   display: flex;
   justify-content: space-between;
+  margin: 0;
 }
 /* Наша команда */
 .team-members {
   display: flex;
   justify-content: space-between;
+  margin: 0;
 }
 .team-members > .item {
   background: var(--white);
