@@ -22,6 +22,15 @@ li {
 ul {
   padding: 0;
 }
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+p {
+  margin-bottom: 0;
+}
+
 /* ПАДДИНГИ В СЕКЦИЯХ */
 .section {
   padding: 94px 0;
@@ -100,7 +109,9 @@ a > .accent {
 .site-nav .link:hover,
 .site-nav .link:focus,
 .contacts-link:hover,
-.contacts-link:focus {
+.contacts-link:focus,
+.footer-contacts-point:hover,
+.footer-contacts-point:focus {
   color: var(--accent-color);
 }
 /*Герой*/
@@ -175,11 +186,17 @@ a > .accent {
   justify-content: space-between;
 }
 /* Наша команда */
+.team-members {
+  display: flex;
+  justify-content: space-between;
+}
 .team-members > .item {
   background: var(--white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+
+  text-align: center;
 }
 .team-members-title {
   font-weight: 500;
@@ -236,6 +253,7 @@ a > .accent {
 /* ФУТЕР */
 .logo.footer {
   color: var(--accent-color);
+  margin-right: 0px;
 }
 .accent.footer {
   color: var(--white);
@@ -244,9 +262,31 @@ footer {
   background-color: var(--footer-bg-color);
 }
 address {
+  margin-top: 20px;
+
   color: var(--white);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+.footer-contacts {
+  margin: 0;
+}
+.footer-contacts-point {
+  display: block;
+  margin-top: 9px;
+
+  color: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  list-style: none;
+}
+
+.footer-data {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
