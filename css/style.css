@@ -172,8 +172,8 @@ a > .accent {
 /*Чем мы занимаемся*/
 .projects-list {
   display: flex;
+  justify-content: space-between;
 }
-
 /* Наша команда */
 .team-members > .item {
   background: var(--white);
