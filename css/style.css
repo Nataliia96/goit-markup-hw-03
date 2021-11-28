@@ -9,8 +9,9 @@
   --title-text-color: rgba(33, 33, 33, 1);
   --accent-color: rgba(33, 150, 243, 1);
   --white: rgba(255, 255, 255, 1);
-  --secondary-background-color: rgba(245, 244, 250, 1);
+  --background-color: rgba(245, 244, 250, 1);
   --footer-bg-color: rgba(47, 48, 58, 1);
+  --hover-btn-color: rgba(24, 140, 232, 1);
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -19,6 +20,7 @@ body {
 li {
   list-style: none;
 }
+
 ul {
   padding: 0;
 }
@@ -42,6 +44,8 @@ main > .projects-section {
 .container {
   width: 1200px;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /*Лого*/
 a > .accent {
@@ -153,6 +157,10 @@ a > .accent {
 
   cursor: pointer;
 }
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--hover-btn-color);
+}
 .hero-section {
   background-color: var(--footer-bg-color);
   padding-top: 200px;
@@ -196,6 +204,9 @@ a > .accent {
   justify-content: space-between;
   margin: 0;
 }
+.img {
+  display: block;
+}
 /* Наша команда */
 .team-members {
   display: flex;
@@ -203,6 +214,7 @@ a > .accent {
   margin: 0;
 }
 .team-members > .item {
+  padding-bottom: 30px;
   background: var(--white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -221,7 +233,6 @@ a > .accent {
   color: var(--title-text-color);
 }
 .team-members-position {
-  margin-bottom: 30px;
   margin-top: 10px;
 
   font-size: 16px;
@@ -229,12 +240,26 @@ a > .accent {
   letter-spacing: 0.03em;
 }
 .team.section {
-  background-color: var(--secondary-background-color);
+  background-color: var(--background-color);
 }
 
 /* Фильтры в Портфолио */
+.portfolio-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.portfolio-title {
+  margin: 0px;
+}
+.filter-list {
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
+}
 .filter-list .btn {
-  background-color: var(--secondary-background-color);
+  padding: 6px 22px;
+  background-color: var(--background-color);
   border-radius: 4px;
   border: 0;
 
@@ -246,6 +271,9 @@ a > .accent {
   letter-spacing: 0.03em;
 
   cursor: pointer;
+}
+.filter-list > .item:not(:last-child) {
+  margin-right: 8px;
 }
 .filter-list .btn:hover,
 .filter-list .btn:focus {
