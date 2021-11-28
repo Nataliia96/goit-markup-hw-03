@@ -12,6 +12,7 @@
   --background-color: rgba(245, 244, 250, 1);
   --footer-bg-color: rgba(47, 48, 58, 1);
   --hover-btn-color: rgba(24, 140, 232, 1);
+  --portfolio-card-margin: 30px;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -31,6 +32,9 @@ h3 {
 }
 p {
   margin-bottom: 0;
+}
+img {
+  display: block;
 }
 
 /* ПАДДИНГИ В СЕКЦИЯХ */
@@ -204,9 +208,6 @@ a > .accent {
   justify-content: space-between;
   margin: 0;
 }
-.img {
-  display: block;
-}
 /* Наша команда */
 .team-members {
   display: flex;
@@ -256,6 +257,7 @@ a > .accent {
   justify-content: center;
 
   margin: 0;
+  margin-bottom: 50px;
 }
 .filter-list .btn {
   padding: 6px 22px;
@@ -283,7 +285,24 @@ a > .accent {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* Портфолио работы */
-.porfolio-list-title {
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: calc(-1 * var(--portfolio-card-margin));
+  margin-top: calc(-1 * var(--portfolio-card-margin));
+}
+.portfolio-list > .item {
+  border: 1px solid rgba(238, 238, 238, 1);
+  flex-basis: calc(100% / 3 - var(--portfolio-card-margin));
+  margin-top: var(--portfolio-card-margin);
+  margin-left: var(--portfolio-card-margin);
+}
+.img {
+  max-width: 100%;
+}
+.portfolio-list-title {
+  margin-bottom: 4px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -293,11 +312,16 @@ a > .accent {
 .portfolio-list-link {
   text-decoration: none;
 }
-.porfolio-list-type {
+.portfolio-list-type {
+  margin-top: 0;
+
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+.portfolio-list-content {
+  padding: 20px 24px;
 }
 /* ФУТЕР */
 .logo.footer {
@@ -334,7 +358,6 @@ address {
   text-decoration: none;
   list-style: none;
 }
-
 .footer-data {
   padding-top: 60px;
   padding-bottom: 60px;
