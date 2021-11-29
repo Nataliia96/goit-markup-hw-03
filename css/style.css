@@ -13,6 +13,7 @@
   --footer-bg-color: rgba(47, 48, 58, 1);
   --hover-btn-color: rgba(24, 140, 232, 1);
   --portfolio-card-margin: 30px;
+  --fotter-contacts-color: rgba(255, 255, 255, 0.6);
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -174,6 +175,10 @@ a > .accent {
 .features.container {
   display: flex;
 }
+.features.container > .item {
+  flex-basis: calc(100% / 4 - 30px);
+}
+
 .features.container > .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -215,7 +220,6 @@ a > .accent {
   margin: 0;
 }
 .team-members > .item {
-  padding-bottom: 30px;
   background: var(--white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -223,8 +227,11 @@ a > .accent {
 
   text-align: center;
 }
+.team-members-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .team-members-title {
-  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -234,8 +241,6 @@ a > .accent {
   color: var(--title-text-color);
 }
 .team-members-position {
-  margin-top: 10px;
-
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -250,6 +255,7 @@ a > .accent {
   padding-bottom: 94px;
 }
 .portfolio-title {
+  display: none;
   margin: 0px;
 }
 .filter-list {
@@ -291,6 +297,7 @@ a > .accent {
 
   margin-left: calc(-1 * var(--portfolio-card-margin));
   margin-top: calc(-1 * var(--portfolio-card-margin));
+  margin-bottom: 0;
 }
 .portfolio-list > .item {
   border: 1px solid rgba(238, 238, 238, 1);
@@ -325,11 +332,11 @@ a > .accent {
 }
 /* ФУТЕР */
 .logo.footer {
-  color: var(--accent-color);
+  color: var(--white);
   margin-right: 0px;
 }
 .accent.footer {
-  color: var(--white);
+  color: var(--accent-color);
 }
 footer {
   background-color: var(--footer-bg-color);
@@ -350,13 +357,13 @@ address {
   display: block;
   margin-top: 9px;
 
-  color: inherit;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.71;
   letter-spacing: 0.02em;
   text-decoration: none;
   list-style: none;
+  color: var(--fotter-contacts-color);
 }
 .footer-data {
   padding-top: 60px;
