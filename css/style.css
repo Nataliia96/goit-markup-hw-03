@@ -14,6 +14,7 @@
   --hover-btn-color: rgba(24, 140, 232, 1);
   --portfolio-card-margin: 30px;
   --fotter-contacts-color: rgba(255, 255, 255, 0.6);
+  --hero-background-shadow: rgba(47, 48, 58, 0, 4);
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -124,6 +125,10 @@ a > .accent {
   color: var(--accent-color);
 }
 .header-section {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: rgba(236, 236, 236, 1);
@@ -167,9 +172,19 @@ a > .accent {
   background-color: var(--hover-btn-color);
 }
 .hero-section {
-  background-color: var(--footer-bg-color);
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-color: var(--footer-bg-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4) 100%,
+      rgba(47, 48, 58, 1)
+    ),
+    url(../images/background.jpg);
 }
 /*Особенности*/
 .features.container {
@@ -195,6 +210,41 @@ a > .accent {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.features.container > .item::before {
+  content: "";
+
+  display: block;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: rgba(245, 244, 250, 1);
+}
+.features.container > .item:nth-child(1):before {
+  background-image: url(..//images/antenna.svg);
+  background-size: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.features.container > .item:nth-child(2):before {
+  background-image: url(../images/clock.svg);
+  background-size: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.features.container > .item:nth-child(3):before {
+  background-image: url(../images/diagram.svg);
+  background-size: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.features.container > .item:nth-child(4):before {
+  background-image: url(../images/astronaut.svg);
+  background-size: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Заголовки секций */
 .projects-section-title,
 .team-section-title {
@@ -256,7 +306,6 @@ a > .accent {
   padding-bottom: 94px;
 }
 .portfolio-title {
-  display: none;
   margin: 0px;
 }
 .filter-list {
@@ -301,7 +350,6 @@ a > .accent {
   margin-bottom: 0;
 }
 .portfolio-list > .item {
-  border: 1px solid rgba(238, 238, 238, 1);
   flex-basis: calc(100% / 3 - var(--portfolio-card-margin));
   margin-top: var(--portfolio-card-margin);
   margin-left: var(--portfolio-card-margin);
@@ -330,6 +378,7 @@ a > .accent {
 }
 .portfolio-list-content {
   padding: 20px 24px;
+  border: 1px solid rgba(238, 238, 238, 1);
 }
 /* ФУТЕР */
 .logo.footer {
